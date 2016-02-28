@@ -38,4 +38,4 @@ RUN sed -i -e 's/# RunMode = Inetd/RunMode = ForkDaemon/' /etc/bitlbee/bitlbee.c
 WORKDIR /tmp
 RUN rm -rf /tmp/skype4pidgin.tar.gz /tmp/skype4pidgin-1.1
 
-CMD /usr/bin/bitlbee -nv
+CMD /usr/sbin/bitlbee -nv
