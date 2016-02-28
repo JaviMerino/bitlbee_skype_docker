@@ -1,5 +1,15 @@
-Simple tasks
-============
+Build the container
+===================
+
+    docker build -t bitlbee_skype:1.1.0 .
+
+Run the container
+=================
+
+    docker run --rm -p 6667:6667 -v $host_bitlbee_config:/var/lib/bitlbee bitlbee_skype:1.1.0
+
+Simple tasks with bitlbee
+=========================
 
 Register an account on the bitlbee server
 -----------------------------------------
