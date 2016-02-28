@@ -32,7 +32,7 @@ RUN make
 RUN make install
 
 ## Setup service
-RUN sed -i -e 's/# RunMode = Inetd/RunMode = Daemon/' /etc/bitlbee/bitlbee.conf
+RUN sed -i -e 's/# RunMode = Inetd/RunMode = ForkDaemon/' /etc/bitlbee/bitlbee.conf
 
 # Cleanup
 #RUN rm -rf /tmp/skype4pidgin.tar.gz /tmp/skype4pidgin-1.1
