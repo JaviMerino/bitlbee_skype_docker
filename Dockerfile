@@ -2,7 +2,7 @@ FROM debian:jessie
 
 ## Expose ports.
 EXPOSE 6667
-VOLUME /srv/bitlbee
+VOLUME /var/lib/bitlbee
 
 MAINTAINER Javi Merino <merino.jav@gmail.com>
 
