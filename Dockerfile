@@ -35,7 +35,7 @@ RUN make install
 RUN sed -i -e 's/# RunMode = Inetd/RunMode = ForkDaemon/' /etc/bitlbee/bitlbee.conf
 
 # Cleanup
+WORKDIR /tmp
 RUN rm -rf /tmp/skype4pidgin.tar.gz /tmp/skype4pidgin-1.1
 
-WORKDIR /srv/bitlbee
 CMD /usr/bin/bitlbee -nv
