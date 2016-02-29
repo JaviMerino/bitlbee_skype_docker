@@ -20,8 +20,10 @@ RUN apt-get update && apt-get install -y \
     bitlbee-libpurple \
     build-essential \
     curl \
+    libjson-glib-1.0-0 \
     libjson-glib-dev \
-    libpurple-dev
+    libpurple-dev \
+    libpurple0
 
 WORKDIR /tmp
 # Install skypeweb
@@ -37,5 +39,11 @@ RUN sed -i -e 's/# RunMode = Inetd/RunMode = ForkDaemon/' /etc/bitlbee/bitlbee.c
 # Cleanup
 WORKDIR /tmp
 RUN rm -rf /tmp/skype4pidgin.tar.gz /tmp/skype4pidgin-1.1
+RUN apt-get remove -y --purge \
+    build-essential \
+    curl \
+    libjson-glib-dev \
+    libpurple-dev
+RUN apt-get autoremove -y
 
 CMD /usr/sbin/bitlbee -nv
