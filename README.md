@@ -30,6 +30,6 @@ Log in bitlbee
 Sensible nicks
 --------------
 
-    account set skypeweb nick_format %full_name
+    account skypeweb set nick_format %full_name
 
 You need to reload the account to see proper names
