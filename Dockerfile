@@ -46,4 +46,4 @@ RUN apt-get remove -y --purge \
     libpurple-dev
 RUN apt-get autoremove -y
 
-CMD /usr/sbin/bitlbee -nv
+ENTRYPOINT ["/usr/sbin/bitlbee", "-nv"]
