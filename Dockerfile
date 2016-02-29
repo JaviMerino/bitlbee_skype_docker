@@ -6,7 +6,7 @@ VOLUME /var/lib/bitlbee
 
 MAINTAINER Javi Merino <merino.jav@gmail.com>
 
-COPY bitlbee.key /tmp/bitlbee.key
+ADD https://code.bitlbee.org/debian/release.key /tmp/bitlbee.key
 RUN echo "deb http://code.bitlbee.org/debian/master/jessie/amd64/ ./" > /etc/apt/sources.list.d/bitlbee.list
 RUN apt-key add /tmp/bitlbee.key
 
